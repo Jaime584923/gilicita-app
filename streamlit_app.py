@@ -5,6 +5,20 @@ from datetime import datetime, timedelta
 
 # Configuração visual do App para o celular
 st.set_page_config(page_title="GiLicita", page_icon="💼", layout="centered")
+
+# ==========================================
+# CÓDIGO SECRETO: ESCONDE MENUS E RODAPÉS DE PROGRAMAÇÃO
+# ==========================================
+st.markdown("""
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    [data-testid="stDecoration"] {display: none;}
+    .viewerBadge_container__1QSob {display: none !important;}
+    </style>
+    """, unsafe_allow_html=True)
+
 st.title("💼 GiLicita — Buscador de Licitações")
 st.write("Monitore oportunidades de brindes no PNCP em tempo real.")
 
@@ -61,3 +75,4 @@ if resultados:
             st.link_button("🌐 Abrir Edital Oficial", item['Link'])
 else:
     st.info("Nenhuma licitação encontrada.")
+
