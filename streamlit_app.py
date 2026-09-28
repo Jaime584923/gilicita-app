@@ -7,18 +7,27 @@ from datetime import datetime, timedelta
 st.set_page_config(page_title="GiLicita", page_icon="💼", layout="centered")
 
 # ==========================================
-# CÓDIGO SECRETO REFORÇADO: ESCONDE TOTALMENTE O RODAPÉ E RECURSOS TÉCNICOS
+# CÓDIGO ULTRA-REFORÇADO: ESCONDE TUDO EM TODAS AS VERSÕES DO STREAMLIT
 # ==========================================
 st.markdown("""
     <style>
+    /* Esconde o menu de opções do topo */
     #MainMenu {visibility: hidden;}
-    footer {visibility: hidden; display: none !important;}
     header {visibility: hidden;}
+    
+    /* Esconde o botão azul de Deploy e o status */
+    .stAppDeployButton {display: none !important;}
+    .stDeployButton {display: none !important;}
+    [data-testid="stToolbar"] {display: none !important;}
     [data-testid="stDecoration"] {display: none !important;}
-    [data-testid="stStatusWidget"] {display: none !important;}
+    [data-testid="stStatusWidget"] {visibility: hidden !important;}
+    
+    /* Esconde o rodapé Manage App e marcas d'água */
+    footer {visibility: hidden; display: none !important;}
+    div[class^="viewerBadge"] {display: none !important;}
+    div[class*="viewerBadge"] {display: none !important;}
     .viewerBadge_container__1QSob {display: none !important;}
-    styles_viewerBadge__46g5w {display: none !important;}
-    iframe[title="Managed Hosting Badge"] {display: none !important;}
+    div.embeddedAppMetaInfoBar_container__DxxL1 {visibility: hidden !important;}
     </style>
     """, unsafe_allow_html=True)
 
