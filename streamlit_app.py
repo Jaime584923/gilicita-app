@@ -7,15 +7,18 @@ from datetime import datetime, timedelta
 st.set_page_config(page_title="GiLicita", page_icon="💼", layout="centered")
 
 # ==========================================
-# CÓDIGO SECRETO: ESCONDE MENUS E RODAPÉS DE PROGRAMAÇÃO
+# CÓDIGO SECRETO REFORÇADO: ESCONDE TOTALMENTE O RODAPÉ E RECURSOS TÉCNICOS
 # ==========================================
 st.markdown("""
     <style>
     #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
+    footer {visibility: hidden; display: none !important;}
     header {visibility: hidden;}
-    [data-testid="stDecoration"] {display: none;}
+    [data-testid="stDecoration"] {display: none !important;}
+    [data-testid="stStatusWidget"] {display: none !important;}
     .viewerBadge_container__1QSob {display: none !important;}
+    styles_viewerBadge__46g5w {display: none !important;}
+    iframe[title="Managed Hosting Badge"] {display: none !important;}
     </style>
     """, unsafe_allow_html=True)
 
