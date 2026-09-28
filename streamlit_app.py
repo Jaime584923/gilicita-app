@@ -34,7 +34,8 @@ st.markdown("""
 st.title("💼 GiLicita — Buscador de Licitações")
 st.write("Monitore oportunidades de brindes no PNCP em tempo real.")
 
-PALAVRAS_CHAVE = ["brindes"]
+PALAVRAS_CHAVE = PALAVRAS_CHAVE = ["brindes", "caneta", "squeeze", "agenda", "promocional", "camiseta", "mochila"]
+
 DATA_INICIAL = (datetime.now() - timedelta(days=30)).strftime("%Y%m%d")
 DATA_FINAL = datetime.now().strftime("%Y%m%d")
 
